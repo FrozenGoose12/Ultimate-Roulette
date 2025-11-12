@@ -375,7 +375,7 @@ while True:
 
         print("Spinning Wheel and Ball...\n")
         time.sleep(s)
-        slot = random.randint(0, 0)
+        slot = random.randint(0, 37)
 
 
         if slot == 37: #GREEN
@@ -563,4 +563,5 @@ while True:
             else:
                 print(f"The ball did not land in double street {dstreet}.\n")
                 chips -= bet
+
                 token(chips,n)
