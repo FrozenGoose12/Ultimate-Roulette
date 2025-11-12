@@ -55,6 +55,7 @@ while True:
             print("GREEN!")
             c = "GREEN"
     time.sleep(1)
+
     if c == color:
         print(f"Your selection of {color.lower()} was a Hit!\n")
         print(f"You won {bet} chips!")
