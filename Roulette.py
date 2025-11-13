@@ -4,7 +4,7 @@ import time
 n = 100 #chip multiplier
 s = 2 #wheel delay
 t = 1 #reveal delay
-
+wipeout = 0
 
 def wheel():
     print("\nRed numbers:\n1, 3, 5, 7, 9, 12, 14, 16, 18, 19, 21, 23, 25, 27, 30, 32, 34, 36\n")
@@ -138,7 +138,9 @@ while True:
 
     while True:
         if chips == 0:
-            print("You have been wiped out. Better luck next time!\n")
+            print("You have been wiped out. Better luck next time!")
+            wipeout += 1
+            print(f"Wipeout #{wipeout}\n")
             break
 
         while True:
@@ -565,3 +567,4 @@ while True:
                 chips -= bet
 
                 token(chips,n)
+
