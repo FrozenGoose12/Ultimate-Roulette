@@ -66,9 +66,7 @@ while True:
         print()
         if help == 12:
             continue
-
-
-
+            
     elif start == "2":
         print("\n1. Set Chip Value\n2. Set Wheel Delay\n3. Set Reveal Delay\n4. Back\n")
         while True:
@@ -192,7 +190,6 @@ while True:
                     break
                 else:
                     print("\nPlease choose High or Low")
-
 
         elif btype == 4:
             print("You have chosen Dozen!")
@@ -567,4 +564,5 @@ while True:
                 chips -= bet
 
                 token(chips,n)
+
 
