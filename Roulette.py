@@ -40,6 +40,7 @@ while True:
             except ValueError:
                 print("Please choose an option 1-12\n")
 
+        
         if help == 1:
             print("Bet red or black. If the ball lands on the color you selected, you win!")
         elif help == 2:
@@ -563,4 +564,5 @@ while True:
                 chips -= bet
 
                 token(chips,n)
+
 
