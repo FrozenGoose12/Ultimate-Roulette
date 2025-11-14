@@ -9,7 +9,7 @@ def wheel():
     print("\nRed numbers:\n1, 3, 5, 7, 9, 12, 14, 16, 18, 19, 21, 23, 25, 27, 30, 32, 34, 36\n")
     print("Black numbers:\n2, 4, 6, 8, 10, 11, 13, 15, 17, 20, 22, 24, 26, 28, 29, 31, 33, 35\n")
     print("Green numbers:\n0, 00\n")
-
+    
 def token(chips, n):
     print(f"You now have {chips} chips (${chips * n}).\n")
 
@@ -563,6 +563,4 @@ while True:
                 chips -= bet
 
                 token(chips,n)
-
-
 
