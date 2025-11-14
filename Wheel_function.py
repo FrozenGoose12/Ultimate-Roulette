@@ -22,10 +22,10 @@ def RouletteWheel():
             print(f"\033[1;30m{pocket}")
 
         elif int(pocket) == 0:  # GREEN
-            print(f"\033[1;32m0")
+            print(f"\033[1;38;2;0;168;107m0")
 
         elif int(pocket) == 37:
-            print(f"\033[1;32m00")
+            print(f"\033[1;38;2;0;168;107m00")
 
         slot += 1
         if slot == 38:
@@ -42,4 +42,5 @@ def RouletteWheel():
 
 if __name__ == "__main__":
     print(f"\033[1mThe ball landed on {RouletteWheel()}!")
+
 
