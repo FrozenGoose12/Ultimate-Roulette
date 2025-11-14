@@ -1,7 +1,7 @@
 import time
 import random
 def RouletteWheel():
-    maxdelay = random.uniform(1, 1.4)
+    maxdelay = random.uniform(1, 1.3)
     start = 0
     slot = random.randint(0, 37)
     wheel = [
@@ -42,3 +42,4 @@ def RouletteWheel():
 
 if __name__ == "__main__":
     print(f"\033[1mThe ball landed on {RouletteWheel()}!")
+
