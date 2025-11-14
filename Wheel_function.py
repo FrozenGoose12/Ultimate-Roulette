@@ -1,6 +1,7 @@
 import time
 import random
 def RouletteWheel():
+    maxdelay = random.uniform(1, 1.4)
     start = 0
     slot = random.randint(0, 37)
     wheel = [
@@ -35,7 +36,7 @@ def RouletteWheel():
         time.sleep(delay)
         start += 1
 
-        if delay == 1:
+        if delay > maxdelay:
             print(f"\033[0m", end="")
             return pocket
 
