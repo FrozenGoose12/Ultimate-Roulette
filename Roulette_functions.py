@@ -606,19 +606,19 @@ def doublestreet(wheel_delay, reveal_delay, chips, n):
         except ValueError:
             print("Please select a street from 1-11\n")
 
-        bet = place_your_bet(chips)
-        results = wheelit(wheel_delay, reveal_delay)
-        slot = results[0]
+    bet = place_your_bet(chips)
+    results = wheelit(wheel_delay, reveal_delay)
+    slot = results[0]
 
-        if slot in dbase:
-            print(f"Your selection of double street {dstreet} was a Hit!\n")
-            print(f"You won {bet * 5} chips!")
-            chips += (bet * 5)
-            token(chips, n)
-        else:
-            print(f"The ball did not land in double street {dstreet}.\n")
-            chips -= bet
-            token(chips, n)
+    if slot in dbase:
+        print(f"Your selection of double street {dstreet} was a Hit!\n")
+        print(f"You won {bet * 5} chips!")
+        chips += (bet * 5)
+        token(chips, n)
+    else:
+        print(f"The ball did not land in double street {dstreet}.\n")
+        chips -= bet
+        token(chips, n)
 
     return chips
 
@@ -667,4 +667,5 @@ def Roulette(n, s, t, wipeout):
             elif bet_type == 9:
                 chips = basket(s, t, chips, n)
             elif bet_type == 10:
+
                 chips = doublestreet(s, t, chips, n) #67
