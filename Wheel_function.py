@@ -17,15 +17,16 @@ def RouletteWheel():
         pocket = str(wheel[slot])
         if int(pocket) in [1, 3, 5, 7, 9, 12, 14, 16, 18, 19, 21, 23, 25, 27, 30, 32, 34, 36]:  # RED
             print(f"\033[1;31m{pocket}")
-
+            c = "RED"
         elif int(pocket) in [2, 4, 6, 8, 10, 11, 13, 15, 17, 20, 22, 24, 26, 28, 29, 31, 33, 35]:  # BLACK
             print(f"\033[1;30m{pocket}")
-
+            c = "BLACK"
         elif int(pocket) == 0:  # GREEN
             print(f"\033[1;38;2;0;168;107m0")
-
+            c = "GREEN"
         elif int(pocket) == 37:
             print(f"\033[1;38;2;0;168;107m00")
+            c = "GREEN"
 
         slot += 1
         if slot == 38:
@@ -38,9 +39,10 @@ def RouletteWheel():
 
         if delay > maxdelay:
             print(f"\033[0m", end="")
-            return pocket
+            return [int(pocket), c]
 
 if __name__ == "__main__":
-    print(f"\033[1mThe ball landed on {RouletteWheel()}!")
+    res = RouletteWheel()
+    print(f"\033[1mThe ball landed on {res[0]} – {res[1]}!")
 
 
