@@ -624,14 +624,6 @@ def doublestreet(wheel_delay, reveal_delay, chips, n):
 
 
 
-#Code to run game in the main file:
-# from Roulette_functions import *
-#
-# n, s, t, wipeout = StartMenu()
-# Roulette(n, s, t, wipeout)
-
-
-
 
 
 def Roulette(n, s, t, wipeout):
@@ -669,3 +661,7 @@ def Roulette(n, s, t, wipeout):
             elif bet_type == 10:
 
                 chips = doublestreet(s, t, chips, n) #67
+
+if __name__ == "__main__":
+    n, s, t, wipeout = StartMenu() #This code initiates the game
+    Roulette(n, s, t, wipeout)
